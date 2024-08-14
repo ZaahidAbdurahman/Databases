@@ -386,7 +386,75 @@ Figure 22: Validating Collections
 
 This comprehensive understanding of MongoDB collections sets the stage for more advanced topics later in the course. The upcoming challenge will allow us to apply our knowledge effectively.
 
+# Operators and Arrays
+
+MongoDB provides various operators to filter fields, such as strings, numbers, arrays, objects, or subdocuments. These operators are essential for conditionally filtering results in queries. 
+
+![image](https://github.com/user-attachments/assets/4d3df1fe-a115-4510-a3fd-262001fda4e2)
+
+- For instance, instead of greater than, use $gt, and for less than, use $lt. To illustrate, consider a scenario where we want to find recipes with a cook time of 30 minutes or less.
+
+- The query would be  cook_time: { $lte: 30 } }. Additionally, combining conditions, like cook time and prep time, is done with a comma for an "and" query.
+
+![image](https://github.com/user-attachments/assets/86b44ce5-bd3d-40a4-9eea-c321d46a6041)
+
+Figure 28: Using less than operator
+
+- Navigating object fields, such as ingredients, involves dot notation.
+
+- To find recipes with eggs, the query is: { "ingredients.name": "egg" }. However, avoid expecting an exact match when using dot notation, and remember to use it unless an exact match is intended.
+
+![image](https://github.com/user-attachments/assets/5b4633e0-acd7-444e-868f-4a7f1c4fbbb7)
+
+- For more operators, refer to the MongoDB documentation. Importantly, exploring different operators empowers developers to craft richer queries.
+
+- Now, transitioning to document updates and deletions, we will delve into those aspects in the next discussion.
+
+# Updating Documents
+
+- In data management, changes are inevitable, whether due to schema adjustments, user profile updates, or corrections like fixing a spelling error in a recipe. 
+
+- For this tutorial, we will utilize the "examples" collection to avoid altering our recipe data.
+
+- You can refer to the "examples.js" file for instructions on importing this collection.
+
+![image](https://github.com/user-attachments/assets/d641152d-36b4-47bf-88de-2e933d8474bb)
+
+Figure 31: Updating Documents
+
+![image](https://github.com/user-attachments/assets/f5539f33-2d65-4c8e-b6f1-ecb86a83b3c7)
 
 
+![image](https://github.com/user-attachments/assets/9d69b48a-afce-4d8b-9b72-a2aa6cc611f8)
 
- 
+Figure 36: Eventual Consistency
+
+- In the context of a "likes_count" field in a recipe, the inc operator effectively increments the count, demonstrating atomic operations and avoiding inconsistencies in simultaneous likes.
+
+- It's a powerful technique for maintaining data accuracy.
+
+# Updating Arrays
+
+![image](https://github.com/user-attachments/assets/5aa58eb2-619d-409b-ab8d-ec03e2cc1509)
+
+Figure 37: Working with Arrays
+
+- Upon running find, observe the added ID 60. To remove it, replace push with pull in the update operation.
+
+- The document will be updated, and the ID will disappear from the likes array. Note that the added element could be of any valid type: integer, string, object, or even another array.
+
+# Deleting Documents
+
+- We have two primary deletion options: deleteOne and deleteMany. Both methods require a filter document, akin to the find command in update operations.
+
+- With deleteOne, the first matching document in the collection is deleted, while deleteMany removes all documents that match the specified filter.
+
+![image](https://github.com/user-attachments/assets/fd09c92a-164a-4c1c-b94c-4b6b62f24b88)
+
+Figure 40: Using deleteOne
+
+- Users can assign query results to variables, as demonstrated by querying a recipe collection, formatting the output into a table, and leveraging JavaScript functionalities like console.table. 
+
+![image](https://github.com/user-attachments/assets/91af6ae8-c351-469a-9e1c-58eb267c6dc8)
+
+Figure 43: Exercise Image Pending
