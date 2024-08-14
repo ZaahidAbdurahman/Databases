@@ -201,17 +201,192 @@ Figure 36: GROUP BY
 
 # Compound Select
 
+# Transforming SQL Data
+
+- Now, let's talk about transforming SQL data – because sometimes, you have to mold it to fit your needs. Ever want to change the case of a string? Well, there is LOWER for lowercase and UPPER for uppercase. 
+
+![image](https://github.com/user-attachments/assets/2da4f94c-cf9e-4cec-b62c-55f373972114)
+
+Figure 39: Lower and Upper Case
+
+Now, for those times when you need data to wear a different hat, there is CAST. 
+
+![image](https://github.com/user-attachments/assets/93f922a9-46a7-4820-8314-8fa86d57d532)
+
+Figure 42: CAST
+
+- It lets you interpret one data type as another – useful when you cannot tweak the database schema. Oh, and keep in mind, sorting can behave differently based on how you treat data types.
+
+# Aliases
+
+- Alright, let's wrap up with a quick chat about aliases. You know, the names of the fields we get back in our queries – sometimes, they could use a makeover. If you want to give them a friendlier name, throw in the AS keyword. 
+
+![image](https://github.com/user-attachments/assets/2553b6a0-7ce5-4bf4-a5ba-01fa21edf159)
+
+- Like, check this out: instead of having UPPER(last_name) as a column header, let's call it 'surname'. And for first_name, how about 'firstname' without the underscore?   
+
+# Modify or Adding Data
+
+# Adding Data to Tables
+
+![image](https://github.com/user-attachments/assets/f759ff22-7810-4329-aca4-543b9b162c80)
+
+Figure 45: Adding Data to Tables
+
+Carol's last name has been forgotten. SQL does not like that, it has to have some data. 
+
+![image](https://github.com/user-attachments/assets/892a653b-4637-4469-8f4c-ab53400109c1)
+
+# Modifying Table Data
+
+- Alright, let's get into the groove of modifying data. We use the update keyword for this. 
+
+![image](https://github.com/user-attachments/assets/ccb833f0-1c51-45ed-b278-5876922dff5b)
+
+Figure 50: Modifying Table Data
+
+![image](https://github.com/user-attachments/assets/75af5347-e380-47cd-bb8e-865f9c1a9470)
+
+Figure 52: Carlos Morrison 
+
+# Removing Table Data
+
+- Alright, time to clean house. The delete keyword is your go-to for kicking records out of a table.
+
+- Like update, you gotta tell the database where to drop the bomb, and it is smart to throw in a condition to keep things targeted.
+
+- You do not wanna wipe out the entire guest list accidentally.
+
+![image](https://github.com/user-attachments/assets/efbd10e5-e341-486a-9c4a-9e527bde9c93)
+
+Figure 55: Removing Table Data
+
+![image](https://github.com/user-attachments/assets/6904bf5b-8825-401d-beac-9671351237a3)
+
+Figure 56: Delete From People
+
+# Module 2: Introduction to MongoDB
+
+# Introduction to MongoDB
+
+- A widely used document database, MongoDB, is recognized for its robustness and user-friendliness.
+
+- The course aims to provide developers with essential MongoDB knowledge, including installation, database deployment setup, fundamentals like the document model, database structure, and MQL.
+
+- What is MongoDB?
+
+- In 2009, MongoDB gained popularity among web developers for its user-friendly approach, enabling them to work with data in a format consistent with their applications — documents. 
+
+- Its native drivers seamlessly integrated data with code.
+
+# Relational DB vs MongoDB
+
+- In this course, we will explore MongoDB's workings and distinctions from traditional relational databases.
+
+- At a broad level, databases organize data, and more intricate databases adhere to specific design and data
+  modeling standards.
+
+![image](https://github.com/user-attachments/assets/46ff0ba2-a4a4-45e1-a1e5-5540784cb07c)
+
+Figure 2: Relational (SQL)
+
+![image](https://github.com/user-attachments/assets/6b327912-0c6f-47f8-a02d-07ede9981297)
+
+Figure 4: Structured Query Language
+
+![image](https://github.com/user-attachments/assets/3aeab4b8-e314-40b5-a3b6-9267c8a16ae5)
+
+Figure 5: Joining Related Data
+
+![image](https://github.com/user-attachments/assets/aecbd356-a9fe-49ef-bf14-fa2d8d5d1bfd)
+
+MongoDB's flexible document store is a key feature, where data is stored in documents rather than tables.
+
+![image](https://github.com/user-attachments/assets/05d16bd0-8838-4868-b06f-9cec0bedbe95)
+
+# Documents and Collections
+
+Creating a document
+
+- Documents in MongoDB are essentially field-value pairs stored in BSON, a JSON-like format.
+
+- The process involves creating documents and saving them to a database.
+
+- While demonstrating this in the course using MongoDB shell on a Mac, it's emphasized that the same commands are applicable in Codespaces. 
+
+![image](https://github.com/user-attachments/assets/7ad12c4f-1f73-4e3f-94f1-7dfcad63d705)
+
+Figure 9: MongoDB JSON file
+
+- The process of inserting documents into the database is explained using the Mongo shell command. 
+
+- JavaScript can be written in this shell, and the importance of connecting to the correct database is highlighted.
+
+![image](https://github.com/user-attachments/assets/4065d315-8911-4c55-8172-ef39cf455c19)
+
+Figure 10: Creating a document
+
+![image](https://github.com/user-attachments/assets/c3fd5d02-4171-462b-b7e1-1e65ef74940b)
+
+Figure 11: Formatting a document
+
+# Querying Documents
+
+- The find command in MongoDB, similar to a SELECT statement in SQL, is fundamental for querying recipe documents. 
+
+- It requires a query document as its first parameter; an empty query document retrieves all documents by default.
+
+![image](https://github.com/user-attachments/assets/d9393ef1-6329-4af2-be04-218c0614b7a1)
+
+Figure 13: Using .find with parameters
+
+- Numeric range searches, greater than or less than queries, and other advanced features will be explored in the next section.
+
+# Storing Data in a Document
+
+- MongoDB documents provide a versatile solution for storing diverse data in various formats, offering flexibility not commonly found in traditional relational databases.
+
+- While traditional databases might rely on text or number fields, MongoDB enables us to handle more complex structures, such as a recipe, without the need for extensive refactoring.
+
+![image](https://github.com/user-attachments/assets/33e06582-b384-4315-bd80-4103eef4b02f)
+
+Figure 14: Entering Data into document
+
+![image](https://github.com/user-attachments/assets/f7270e30-b211-40bd-bed0-7453a0b374fc)
+
+Figure 15: Using insert 
+
+Collections
+
+-  The flexibility inherent in MongoDB's document model offers numerous advantages for developers, but maintaining organization becomes challenging over time.
+
+-  Collections play a pivotal role in addressing this challenge.
+
+![image](https://github.com/user-attachments/assets/f51b2de7-fb9e-4190-bfe1-6ff8b9dcb8cf)
+
+Figure 18: Recipe - User - Blog Post
+
+![image](https://github.com/user-attachments/assets/94bb02bd-7a05-407c-a533-020423334f7e)
+
+Figure 19: Collections and Databases
+
+- In our queries, we have been using collections consistently, like in db.recipes.find to retrieve documents.
+  
+- Essential commands include show dbs to display all databases and show collections to list collections within the current database. 
+
+- You can identify the current database using db.getName. Both databases and collections are created dynamically as you insert data.
+
+![image](https://github.com/user-attachments/assets/66437892-702e-4b4f-81e8-dc65e608c12c)
+
+Figure 20: Collections
+
+![image](https://github.com/user-attachments/assets/6e2d1b61-7ad2-4973-b6e4-bff181d9620a)
+
+Figure 22: Validating Collections
+
+This comprehensive understanding of MongoDB collections sets the stage for more advanced topics later in the course. The upcoming challenge will allow us to apply our knowledge effectively.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+ 
