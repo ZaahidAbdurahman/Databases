@@ -453,8 +453,58 @@ Figure 37: Working with Arrays
 
 Figure 40: Using deleteOne
 
+# Development with MongoDB
+
 - Users can assign query results to variables, as demonstrated by querying a recipe collection, formatting the output into a table, and leveraging JavaScript functionalities like console.table. 
 
 ![image](https://github.com/user-attachments/assets/91af6ae8-c351-469a-9e1c-58eb267c6dc8)
 
 Figure 43: Exercise Image Pending
+
+# MongoDB and Python
+
+- So far, we have focused on direct interactions with MongoDB, but let's now explore creating applications with it.
+
+- Fortunately, there are drivers and libraries for various languages and frameworks.
+
+![image](https://github.com/user-attachments/assets/f83c2f6b-ec7a-49b3-a487-0a988ce125e4)
+
+Figure 56: MongoDb & Python
+
+- In the Python shell, import PyMongo, set up the client using localhost and the default port, and define a variable, 'db,' assigned to the 'cooker' database.
+
+- Confirm the connection by checking 'db.name,' which should return 'cooker.
+
+![image](https://github.com/user-attachments/assets/0752d148-924a-4799-981a-919f1e8d3b78)
+
+Figure 58: Sorting with Python
+
+- Additional commands like sorting and limiting can be demonstrated using '.sort()' and '.limit()'.
+
+- For instance, sort by title in ascending order and limit results to three documents.
+
+# MongoDB and Node.js
+
+- So far, we have been directly interacting with MongoDB, which is excellent, but what about building actual applications? There are official MongoDB drivers for various frameworks and libraries, and today, we will explore using Node.js.
+
+![image](https://github.com/user-attachments/assets/9589ca5a-ceac-4ca7-8f8c-4c57a249a0e0)
+
+Figure 59: Add MongoDB as a Dependency
+
+![image](https://github.com/user-attachments/assets/c836de1d-047f-4c62-b18d-7563a1a5b393)
+
+Figure 62: Node Sorting
+
+- Moving on to other examples, we ran a find one command, and Node.js formatted the result nicely. Similarly, we can use the find command to list multiple recipes. 
+
+- In example 4, we add a sort to order by title and limit to three documents.
+
+# GridFS
+
+- In MongoDB, we have the capability to store entire files, not just documents, through a feature called GridFS. 
+
+- This technology breaks down file contents into chunks, each stored in its own document, while a parent document holds information about the file.
+
+![image](https://github.com/user-attachments/assets/0043aee4-2b80-4b09-802e-2f24c39c919d)
+
+
