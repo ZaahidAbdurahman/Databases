@@ -1,4 +1,4 @@
-# Databases
+![image](https://github.com/user-attachments/assets/40c5846e-f55d-493c-b8b7-5abd44a8c4c6)# Databases
 
 # DB Browser for SQL Lite
 
@@ -501,10 +501,31 @@ Figure 62: Node Sorting
 
 # GridFS
 
-- In MongoDB, we have the capability to store entire files, not just documents, through a feature called GridFS. 
+- In MongoDB, we have the capability to store entire files, not just documents, through a feature called GridFS.
+
+# Server-side Administration with MongoDB
 
 - This technology breaks down file contents into chunks, each stored in its own document, while a parent document holds information about the file.
 
 ![image](https://github.com/user-attachments/assets/0043aee4-2b80-4b09-802e-2f24c39c919d)
+
+# Config files
+
+- We have extensive flexibility in configuring MongoDB startup options through command-line settings, such as specifying data file location with '--dbpath.' However, MongoDB's configuration files provide a more convenient and secure way to manage these settings.
+
+![image](https://github.com/user-attachments/assets/a2f7d90c-9f4f-461b-92f0-a90cd9ea85f6)
+
+Figure 65: Config file options
+
+# Replication
+
+- In this course, we have primarily utilized a standalone database for convenience in initial learning, but employing such a setup in a production environment is discouraged due to potential issues like server crashes or unavailability leading to downtime. 
+
+- Directories have been created for each replica set member's data files and initiated MongoDB in three terminals, each running on a different port.
+
+- We have initialized the replica set by logging into the primary node, defining a configuration with member details, and executing rs.initiate().
+
+![Uploading image.png…]()
+
 
 
