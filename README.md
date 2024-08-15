@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/40c5846e-f55d-493c-b8b7-5abd44a8c4c6)# Databases
-
 # DB Browser for SQL Lite
 
 # Module 1: Introduction to SQL Databases 
