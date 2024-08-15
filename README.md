@@ -517,7 +517,12 @@ Figure 62: Node Sorting
 
 Figure 65: Config file options
 
+
 # Replication
+
+![image](https://github.com/user-attachments/assets/7aacb0f4-d154-4adf-8ed1-a934abb5c965)
+
+Figure 67: Replica Sets
 
 - In this course, we have primarily utilized a standalone database for convenience in initial learning, but employing such a setup in a production environment is discouraged due to potential issues like server crashes or unavailability leading to downtime. 
 
@@ -525,7 +530,44 @@ Figure 65: Config file options
 
 - We have initialized the replica set by logging into the primary node, defining a configuration with member details, and executing rs.initiate().
 
-![Uploading image.png…]()
+# Sharding
 
+- In this course, we will not cover the entire process of setting up sharding, but it is crucial to grasp the fundamentals.
+
+- Sharding involves distributing or partitioning data across multiple servers, offering performance and infrastructure benefits compared to scaling up with larger servers.
+
+![image](https://github.com/user-attachments/assets/b105d14d-99d6-4871-ad03-07366e9c5a74)
+
+Figure 74: Basic Sharding Setup
+
+- MongoS determines where data resides, retrieves it from the correct server, and merges it seamlessly, simplifying the process for the client.
+
+- Importantly, this happens transparently, requiring no special handling on the application side. 
+
+![image](https://github.com/user-attachments/assets/57d2698c-4ef9-4da2-b72e-a8d5875eb3a8)
+
+Figure 76: How is Your Data Sharded?
+
+# Authentication and Authorization
+
+- Securing databases is crucial, and while safeguarding them behind a firewall or employing network-based security measures is beneficial, it's imperative to implement authentication and authorization.
+
+- Authentication, akin to logging into an account, involves MongoDB usernames, passwords, or keys for access—a bit like having a badge for an office building.
+
+- Authorization, on the other hand, determines specific privileges even after authentication.
+
+- MongoDB uses role-based access control, assigning roles and privileges to users.
+
+# Backups
+
+-  Backing up your databases is crucial, and testing your restore plans is equally important.
+
+-  MongoDB provides various methods for backups, and we'll discuss two of them: copying data files and utilizing mongodump and mongorestore programs.
+
+- The first method involves copying data files, a relatively straightforward yet manual approach.
+
+- Navigate to the MongoDB DB path directory, where all the MongoDB files are located. Before proceeding with the backup, stop any write operations to the disk.
+
+- Log into MongoDB on the shell and execute the command 'DB.fsycnLock' to lock the database against writes temporarily. 
 
 
